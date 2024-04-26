@@ -1,0 +1,577 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    padding-bottom: 75px;
+}
+
+header {
+    background-color: #76c981;
+    color: #fff;
+    padding: 1px;
+    height: 100px;
+}
+
+header img {
+    vertical-align: top;
+    position: relative;
+    top: -25px;
+    left: 40px;
+}
+
+
+
+/* CSS untuk form pencarian */
+form {
+    display: inline-block; /* membuat form dan logo sejajar */
+    margin-left: 500px;
+    margin-right: 20px; /* jarak antara logo dan form */
+    margin-top: 50px;
+    vertical-align: top;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    width: 200px;
+}
+
+input[type="text"]:focus {
+    border-color: #76c981;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f8997c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #5eab6e;
+}
+
+main {
+    padding: 20px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides-fade {
+    display: flex;
+    justify-content: center; /* Menyusun konten secara horizontal di tengah */
+    align-items: center; /* Menyusun konten secara vertikal di tengah */
+    height: 100%; /* Menggunakan tinggi layar penuh */
+    margin-top: 10px;
+    padding: 0;
+}
+
+/* Tombol prev/next */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: transparent; /* Membuat tombol transparan */
+    border: none; /* Menghapus border */
+}
+
+.prev {
+    left: 0; /* Mengatur posisi tombol prev di sebelah kiri */
+}
+
+.next {
+    right: 0; /* Mengatur posisi tombol next di sebelah kanan */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Membuat tombol menjadi semi-transparan saat dihover */
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Gaya untuk navigasi breadcrumb */
+.breadcrumb {
+    background-color: #ffffff; /* Warna latar belakang */
+    padding: 10px; /* Padding agar konten tidak terlalu rapat */
+}
+
+.breadcrumb ul {
+    list-style-type: none; /* Hapus bullet list */
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb ul li {
+    display: inline;
+    font-size: 14px;
+}
+
+.breadcrumb ul li:not(:last-child):after {
+    content: ">";
+    margin: 0 5px; /* Spasi antara tanda panah */
+}
+
+.breadcrumb ul li a {
+    color: #000000; /* Ubah warna teks menjadi merah */
+    text-decoration: none; /* Hapus garis bawah pada tautan */
+    transition: color 0.3s; /* Tambahkan efek transisi warna selama 0.3 detik */
+}
+
+.breadcrumb ul li a:hover {
+    color: #5f9e56; /* Ubah warna teks saat dihover */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Menyusun konten secara horizontal di tengah */
+    align-items: center; /* Menyusun konten secara vertikal di tengah */
+    height: 100%; /* Menggunakan tinggi layar penuh */
+    margin: 10px;
+    padding: 0;
+}
+
+.full-width {
+    width: 100vw; /* Lebar gambar adalah lebar viewport */
+    height: auto; /* Tinggi gambar menyesuaikan proporsi aslinya */
+    display: block; /* Menghilangkan spasi di bawah gambar */
+    object-fit: cover; /* Menyesuaikan gambar untuk mengisi sepenuhnya elemen */
+}
+
+.logo {
+    position: relative; 
+    top: 2px; /* Sesuaikan posisi top jika diperlukan */
+    float: right; /* Menggeser elemen ke kanan */
+    margin-right: 40px; /* Menambahkan jarak antara elemen dengan elemen lain di sebelah kiri */
+}
+
+.logo a {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    color: #000000;
+    font-size: 20px;
+    top: 120%;
+    left: 5%;
+}
+
+.logo a:hover {
+    color: #ff0000; /* Ubah warna saat dihover sesuai kebutuhan */
+}
+
+.text-align {
+    max-width: 900px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px ; /* Mengatur posisi horizontal menjadi tengah */
+    padding: 0 10px;
+    text-align: left; /* Mengatur teks agar berada di tengah */
+    margin-bottom: 20px; /* Menambahkan ruang antara teks dan .image-container */
+}
+
+.blog-index {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    padding: 1 2%;
+}
+
+.snippet {
+    width: 45%; /* Ubah lebar kotak blog sesuai kebutuhan */
+    height: auto; /* Biarkan tinggi menyesuaikan konten */
+    margin-top: 1rem;
+    margin-left: auto; /* Tengahkan kotak blog secara horizontal */
+    margin-right: auto; /* Tengahkan kotak blog secara horizontal */
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    overflow: hidden; /* Pastikan konten tidak meluap */
+}
+
+
+.snippet-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.snippet-text {
+    padding: 20px;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.snippet-text small {
+    color: #ddd;
+}
+
+footer {
+    position: relative;
+    background-color: #333;
+    color: #fff;
+    padding: 90px 0px; /* Ubah padding kiri dan kanan */
+    height: 230px;
+    text-align: center;
+    margin-top: 10px; /* Tambahkan jarak atas */
+    margin-bottom: 7; /* Hapus margin bawah */
+    border-top: 5px solid #fff; /* Ubah ketebalan dan warna garis atas */
+}
+
+
+.footer-logo {
+    height: 200px; /* Sesuaikan tinggi dengan kebutuhan */
+    position: absolute;
+    top: 205px; /* Sesuaikan posisi vertikal */
+    left: -70px; /* Sesuaikan posisi horizontal */
+}
+
+.text-footer {
+    position: relative;
+    text-align: left;
+    margin-top: -240px;
+    padding: 50px;
+}
+
+.text-footer h1 {
+    color: #fff; /* Mengatur warna teks */
+    transition: color 0.3s; 
+}
+
+.text-footer h3 {
+    color: #fff;
+    transition: color 0.3s;
+    position: absolute; /* Menjadikan posisi absolut */
+    left: 50px; /* Sesuaikan nilai left sesuai kebutuhan */
+    top: 100px; /* Sesuaikan nilai top sesuai kebutuhan */
+}
+
+.text-footer h4 {
+    color: #fff;
+    transition: color 0.3s;
+    position: absolute; /* Menjadikan posisi absolut */
+    left: 50px; /* Sesuaikan nilai left sesuai kebutuhan */
+    top: 130px; /* Sesuaikan nilai top sesuai kebutuhan */
+}
+
+
+.social-media {
+    margin-top: 160px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.social-media a:hover {
+    color: #ff0000; /* Ubah warna saat dihover sesuai kebutuhan */
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scroll-to-top a {
+    background-color: #ff6f61; /* Ganti warna background */
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 50%; /* Bentuk menjadi lingkaran */
+    font-size: 24px; /* Ukuran font lebih besar */
+    transition: background-color 0.3s, transform 0.3s; /* Tambahkan efek transisi */
+}
+
+.scroll-to-top a:hover {
+    background-color: #ff4040; /* Warna hover yang lebih mencolok */
+    transform: scale(1.1); /* Efek scaling saat dihover */
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.desktop-menu {
+    display: none;
+}
+/* Tampilan menu hamburger pada perangkat mobile */
+.hamburger-menu {
+    display: none;
+}
+
+/* Tampilan menu navigasi desktop pada perangkat tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    header {
+        background-color: #76c981;
+        color: #fff;
+        padding: 1px;
+        height: 40px;
+    }
+    
+    header img {
+        vertical-align: top;
+        position: relative;
+        top: -30px;
+        left: 40px;
+    }
+
+    .breadcrumb {
+        display: block;
+        text-align: left;
+        margin-top: -20px;
+        margin-bottom: -10px;
+    }
+
+    .breadcrumb ul li {
+        display: inline;
+        font-size: 14px;
+        margin: 0 5px; /* Menambahkan ruang di antara setiap item breadcrumb */
+    }
+
+    .breadcrumb ul li:not(:last-child):after {
+        content: ">";
+        margin: 0 5px; /* Spasi antara tanda panah */
+    }
+
+    .logo {
+        display: none;
+    }
+
+    form {
+        display: inline-block; /* membuat form dan logo sejajar */
+        margin-left: 280px; /* Sesuaikan posisi margin sesuai kebutuhan */
+        margin-right: 20px; /* jarak antara logo dan form */
+        margin-top: 5px;
+        vertical-align: top;
+    }
+    
+    input[type="text"] {
+        padding: 5px;
+        border: none;
+        border-bottom: 4px solid #ccc;
+        outline: none;
+        font-size: 12px;
+        transition: border-color 0.3s;
+        width: 120px;
+    }
+    
+    input[type="text"]:focus {
+        border-color: #76c981;
+    }
+    
+    button[type="submit"] {
+        padding: 5px 10px;
+        border: none;
+        background-color: #f8997c;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 12px;
+        transition: background-color 0.3s;
+    }
+    
+    button[type="submit"]:hover {
+        background-color: #5eab6e;
+    }
+
+    .snippet {
+        width: 70%; /* Ubah lebar kotak blog sesuai kebutuhan */
+        height: auto; /* Biarkan tinggi menyesuaikan konten */
+        margin-top: 1rem;
+        margin-left: auto; /* Tengahkan kotak blog secara horizontal */
+        margin-right: auto; /* Tengahkan kotak blog secara horizontal */
+        border: 1px solid #ddd;
+        border-radius: 0.25rem;
+        overflow: hidden; /* Pastikan konten tidak meluap */
+    }
+
+    .text-footer h1 {
+        color: #fff; /* Mengatur warna teks */
+        transition: color 0.3s; /* Menambahkan animasi perubahan warna dengan durasi 0.3 detik */
+        position: absolute; /* Menjadikan posisi absolut */
+        left: 250px; /* Sesuaikan nilai left sesuai kebutuhan */
+        top: 10px; /* Sesuaikan nilai top sesuai kebutuhan */
+    }
+    
+    .text-footer h3 {
+        color: #fff;
+        transition: color 0.3s;
+        position: absolute; /* Menjadikan posisi absolut */
+        left: 270px; /* Sesuaikan nilai left sesuai kebutuhan */
+        top: 60px; /* Sesuaikan nilai top sesuai kebutuhan */
+    }
+
+    .footer-logo {
+        display: none;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+}
+
+/* Tampilan menu hamburger pada perangkat mobile */
+@media only screen and (max-width: 360px) {
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    header {
+        background-color: #76c981;
+        color: #fff;
+        padding: 1px;
+        height: 30px;
+    }
+    
+    header img {
+        vertical-align: top;
+        position: relative;
+        top: -4px;
+        left: 40px;
+    }
+
+    .breadcrumb {
+        display: block;
+        text-align: left;
+        margin-top: -20px;
+        margin-bottom: -5px;
+        margin-left: -20px;
+    }
+
+    .breadcrumb ul li {
+        display: inline;
+        font-size: 12px;
+        margin: 0 5px; /* Menambahkan ruang di antara setiap item breadcrumb */
+    }
+
+    .breadcrumb ul li:not(:last-child):after {
+        content: ">";
+        margin: 0 5px; /* Spasi antara tanda panah */
+    }
+
+    .logo {
+        display: none;
+    }
+
+    form {
+        display: none;
+    }
+
+    .snippet {
+        width: 70%; /* Ubah lebar kotak blog sesuai kebutuhan */
+        height: auto; /* Biarkan tinggi menyesuaikan konten */
+        margin-top: 1rem;
+        margin-left: auto; /* Tengahkan kotak blog secara horizontal */
+        margin-right: auto; /* Tengahkan kotak blog secara horizontal */
+        border: 1px solid #ddd;
+        border-radius: 0.25rem;
+        overflow: hidden; /* Pastikan konten tidak meluap */
+    }
+
+    .text-footer h1 {
+        color: #fff; /* Mengatur warna teks */
+        transition: color 0.3s; /* Menambahkan animasi perubahan warna dengan durasi 0.3 detik */
+        position: absolute; /* Menjadikan posisi absolut */
+        left: 50px; /* Sesuaikan nilai left sesuai kebutuhan */
+        top: 10px; /* Sesuaikan nilai top sesuai kebutuhan */
+    }
+    
+    .text-footer h3 {
+        color: #fff;
+        transition: color 0.3s;
+        position: absolute; /* Menjadikan posisi absolut */
+        left: 70px; /* Sesuaikan nilai left sesuai kebutuhan */
+        top: 60px; /* Sesuaikan nilai top sesuai kebutuhan */
+    }
+
+    .footer-logo {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* Tampilan menu navigasi desktop pada perangkat mobile */
+@media only screen and (max-width: 360px) {
+    nav {
+        display: none; /* Menyembunyikan menu navigasi desktop */
+    }
+
+    .mobile-menu {
+        display: block; /* Menampilkan menu navigasi mobile */
+        text-align: center; /* Membuat menu navigasi mobile berada di tengah */
+        margin-top: 20px; /* Menambahkan jarak atas */
+    }
+
+    .mobile-menu ul {
+        padding: 0;
+    }
+
+    .mobile-menu ul li {
+        list-style: none; /* Menghilangkan bullet list */
+        margin-bottom: 10px; /* Menambahkan jarak antara setiap item menu */
+    }
+
+    .mobile-menu ul li a {
+        color: #000; /* Mengubah warna teks */
+        font-size: 18px; /* Mengubah ukuran font */
+        text-decoration: none; /* Menghilangkan underline */
+        transition: color 0.3s; /* Transisi warna */
+    }
+
+    .mobile-menu ul li a:hover {
+        color: #ff3737; /* Warna yang berubah saat hover */
+    }
+}
